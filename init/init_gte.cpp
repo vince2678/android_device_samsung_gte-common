@@ -60,14 +60,18 @@ void init_target_properties(void)
 		version_release = (char *)"6.0.1";
 	}
 	else if (bootloader.find("T550") == 0) {
+		build_id = (char *)"MMB29M";
 		device = (char *)"gt510wifi";
 		model = (char *)"SM-T550";
 		network_type=WIFI_DEVICE;
+		version_release = (char *)"6.0.1";
 	}
 	else if (bootloader.find("T350") == 0) {
+		build_id = (char *)"MMB29M";
 		device = (char *)"gt58wifi";
 		model = (char *)"SM-T350";
 		network_type=WIFI_DEVICE;
+		version_release = (char *)"6.0.1";
 	}
 	else {
 		return;
