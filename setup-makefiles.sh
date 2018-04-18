@@ -19,7 +19,7 @@
 set -e
 
 # Required!
-export DEVICES="gtelwifiue gtesqltespr gt510wifi"
+export DEVICES="gtelwifiue gtesqltespr gt510wifi gt510lte gt58wifi gt58lte"
 export DEVICE_COMMON=gte-common
 export BOARD_COMMON=msm8916-common
 export VENDOR=samsung
