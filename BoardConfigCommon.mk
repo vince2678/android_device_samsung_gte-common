@@ -21,6 +21,9 @@ USE_QCOM_MIXER_PATHS := 1
 # Init
 TARGET_LIBINIT_MSM8916_DEFINES_FILE := $(LOCAL_PATH)/init/init_gte.cpp
 
+# Kernel
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
+
 # Lights
 TARGET_PROVIDES_LIBLIGHT := false
 
