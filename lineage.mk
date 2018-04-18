@@ -1,12 +1,21 @@
+ifeq ($(filter gt58wifi gt58lte gt510wifi,$(TARGET_DEVICE)),)
+# Release name
+PRODUCT_RELEASE_NAME := Samsung Galaxy Tab A
+
+TARGET_SCREEN_WIDTH := 768
+TARGET_SCREEN_HEIGHT := 1024
+
+else
 # Release name
 PRODUCT_RELEASE_NAME := Samsung Galaxy Tab E
 
 # Boot animation
 TARGET_SCREEN_WIDTH := 800
 TARGET_SCREEN_HEIGHT := 1280
+endif
 
 # Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_tablet_wifionly.mk)
+$(call inherit-product, vendor/lineage/config/common_full_tablet_wifionly.mk)
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)

@@ -1,3 +1,13 @@
+ifeq ($(filter gt58wifi gt58lte gt510wifi,$(TARGET_DEVICE)),)
+# Release name
+PRODUCT_RELEASE_NAME := Samsung Galaxy Tab A
+ROM_BUILDTYPE := NIGHTLY
+
+# Boot animation
+TARGET_SCREEN_WIDTH := 768
+TARGET_SCREEN_HEIGHT := 1024
+
+else
 # Release name
 PRODUCT_RELEASE_NAME := Samsung Galaxy Tab E
 ROM_BUILDTYPE := NIGHTLY
@@ -5,6 +15,7 @@ ROM_BUILDTYPE := NIGHTLY
 # Boot animation
 TARGET_SCREEN_WIDTH := 800
 TARGET_SCREEN_HEIGHT := 1280
+endif
 
 # Inherit some common Omni stuff.
 $(call inherit-product, vendor/omni/config/common_tablet.mk)
