@@ -8,3 +8,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.config.vc_call_vol_steps=15 \
 	ro.config.media_vol_steps=30
+
+# ADB
+PRODUCT_PROPERTY_OVERRIDES += \
+	persist.service.adb.enable=1
+	persist.service.debuggable=1
+	persist.sys.usb.config=mass_storage,adb
