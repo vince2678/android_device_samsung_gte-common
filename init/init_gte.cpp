@@ -73,6 +73,13 @@ void init_target_properties(void)
 		network_type=WIFI_DEVICE;
 		version_release = (char *)"6.0.1";
 	}
+    else if (bootloader.find("T357T") == 0) {
+		build_id = (char *)"MMB29M";
+		device = (char *)"gt58ltetmo";
+		model = (char *)"SM-T357T";
+		network_type=LTE_DEVICE;
+		version_release = (char *)"6.0.1";
+	}
 	else {
 		return;
 	}
