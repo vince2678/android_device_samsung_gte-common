@@ -23,6 +23,8 @@ $(call inherit-product-if-exists, vendor/samsung/gte-common/gte-common-vendor.mk
 
 LOCAL_PATH := device/samsung/gte-common
 
+AUDIO_CONFIG_PATH := hardware/qcom/audio-caf/msm8916/configs
+
 # System properties
 -include $(LOCAL_PATH)/system_prop.mk
 
@@ -35,6 +37,10 @@ PRODUCT_PACKAGES += Camera2
 # Ramdisk
 PRODUCT_PACKAGES += \
 	init.target.rc
+
+# Mixer paths
+PRODUCT_COPY_FILES += \
+	$(AUDIO_CONFIG_PATH)/msm8916_32/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml
 
 # Media (camera) configuration files
 PRODUCT_COPY_FILES += \
