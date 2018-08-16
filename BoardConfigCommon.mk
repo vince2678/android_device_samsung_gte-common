@@ -15,6 +15,9 @@
 #
 LOCAL_PATH := device/samsung/gte-common
 
+# Inherit from common
+include device/samsung/msm8916-common/BoardConfigCommon.mk
+
 # Audio
 USE_QCOM_MIXER_PATHS := 1
 
@@ -29,6 +32,3 @@ TARGET_PROVIDES_LIBLIGHT := false
 
 # Keymaster
 TARGET_PROVIDES_KEYMASTER := true
-
-# Inherit from common
-include device/samsung/msm8916-common/BoardConfigCommon.mk
